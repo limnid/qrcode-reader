@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true">
+
+    <com.example.barcodescanner.views.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.example.barcodescanner.views.GraphicOverlay
+                android:id="@+id/graphicOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+    </com.example.barcodescanner.views.CameraSourcePreview>
+
+    <TextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:alpha="0.7"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="20dp"
+            app:layout_constraintVertical_bias="0.7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <com.example.barcodescanner.views.TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:padding="15dp"
+            android:text="@string/ico_close"
+            android:textColor="#ffffff"
+            app:layout_constraintTop_toBottomOf="@+id/hint"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/flash"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+    <com.example.barcodescanner.views.TextView
+            android:id="@+id/flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:padding="15dp"
+            android:textColor="#ffffff"
+            android:text="@string/ico_flash"
+            app:layout_constraintTop_toBottomOf="@+id/hint"
+            app:layout_constraintLeft_toLeftOf="@+id/close"
+            app:layout_constraintRight_toRightOf="@+id/auto_focus"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+    <com.example.barcodescanner.views.TextView
+            android:id="@+id/auto_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:padding="15dp"
+            android:textColor="#ffffff"
+            android:text="@string/ico_eye"
+            app:layout_constraintTop_toBottomOf="@+id/hint"
+            app:layout_constraintLeft_toLeftOf="@+id/flash"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+</android.support.constraint.ConstraintLayout>
