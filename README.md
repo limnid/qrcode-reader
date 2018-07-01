@@ -1,4 +1,4 @@
-# QR reader using Mobile Vision API with custom animation
+## QR reader using Mobile Vision API with custom animation
 
 Example             |  Example          
 :-------------------------:|:-------------------------:
